@@ -79,15 +79,19 @@ export function ServicesSection() {
           
           <ServiceCard 
             num="01"
-            title="Corporate"
+            title="Landing Pages & Websites"
             tagline="Digitale Aushängeschilder, die Markenwert aufbauen. Rasend schnell, SEO-optimiert und hochgradig interaktiv."
-            timeline="ab 3 Wochen"
-            budget="ab 3.500 €"
+            timeline="ab 3 Tage"
+            budget="ab 150 €"
             features={[
-              "Next.js Static Generation",
-              "Framer Motion Data-Flow",
-              "Multi-Language (i18n)",
-              "Headless CMS (Sanity)"
+              "Custom landing pages & portfolio websites",
+              "Responsive clean and modern UI/UX",
+              "Smooth animations & interactions",
+              "Multi-Language support",
+              "Content upload",
+              "Contact forms & opt-in forms",
+              "Performance-Optimierung",
+              "Deployment & hosting setup"
             ]}
             delay={0.1}
           />
@@ -96,13 +100,17 @@ export function ServicesSection() {
             num="02"
             title="SaaS & Web App"
             tagline="Komplexe SaaS-Lösungen, Dashboards und Plattformen. Fokus auf Datensicherheit, Skalierung und Logik."
-            timeline="ab 8 Wochen"
-            budget="ab 8.500 €"
+            timeline="ab 2 Wochen"
+            budget="ab 500 €"
             features={[
-              "Next.js App Router (SSR)",
-              "PostgreSQL & Prisma",
+              "Fully custom web applications",
+              "Database integration",
               "Role-Based Auth",
-              "Stripe Payment"
+              "API integration",
+              "Real-time features via Socket.io",
+              "Admin dashboards",
+              "DSGVO-compliant data handling",
+              "No payment processing included"
             ]}
             delay={0.2}
           />
