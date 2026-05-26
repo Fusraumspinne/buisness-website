@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@plugin "tailwindcss-animate";
 
-@theme inline {
+/* Custom Theme Variables */
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-border: var(--border);
+  --color-surface: var(--surface);
+  
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #f8f8f2;
+    --foreground: #111111;
+    --border: #e2e2dd;
+    --surface: #efefec;
+    --accent: #E53935;
+    --accent-fg: #ffffff;
+  }
+
+  .dark {
+    --background: #0d0d0d;
+    --foreground: #f2f2f2;
+    --border: #222222;
+    --surface: #141414;
+    --accent: #FF5252;
+    --accent-fg: #000000;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground tracking-tight antialiased transition-colors duration-500 ease-in-out;
+  }
+}
+
+/* Editorial utility classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
