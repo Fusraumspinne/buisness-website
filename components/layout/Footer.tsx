@@ -3,13 +3,23 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { useI18n } from "@/components/providers/i18n-provider";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
 export function Footer() {
+  const { lang, t } = useI18n();
+  const legalLinks =
+    lang === "de"
+      ? { imprint: "Impressum", privacy: "Datenschutz" }
+      : { imprint: "Legal Notice", privacy: "Privacy Policy" };
+
   return (
-    <footer className="bg-background text-foreground pt-20 pb-10 border-t border-border transition-colors duration-500 overflow-hidden">
-      <div className="container mx-auto px-6 grid md:grid-cols-4 gap-12 mb-20">
+    <footer className="bg-background text-foreground pt-20 pb-10 border-t border-border transition-colors duration-500 overflow-hidden relative">
+      
+      <div className="absolute inset-0 bg-grid-pattern opacity-[0.10] select-none pointer-events-none mix-blend-multiply" />
+      
+      <div className="container mx-auto px-6 grid md:grid-cols-4 gap-12 mb-20 relative z-10">
         
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
@@ -64,13 +74,10 @@ export function Footer() {
             <span className="w-2 h-px bg-accent block" /> Index
           </h4>
           <ul className="space-y-4 font-light text-foreground/80">
-            {["about", "services", "projects", "contact"].map((item, i) => (
-              <li key={i}>
-                <Link href={`#${item}`} className="hover:text-accent transition-colors capitalize">
-                  {item}
-                </Link>
-              </li>
-            ))}
+            <li><Link href="#about" className="hover:text-accent transition-colors capitalize">{t.nav.about}</Link></li>
+            <li><Link href="#services" className="hover:text-accent transition-colors capitalize">{t.nav.services}</Link></li>
+            <li><Link href="#projects" className="hover:text-accent transition-colors capitalize">{t.nav.projects}</Link></li>
+            <li><Link href="#contact" className="hover:text-accent transition-colors capitalize">{t.nav.contact}</Link></li>
           </ul>
         </motion.div>
 
@@ -81,12 +88,12 @@ export function Footer() {
          whileInView={{ opacity: 1 }}
          viewport={{ once: true }}
          transition={{ duration: 1, delay: 0.4, ease }}
-         className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-foreground/40 text-sm border-t border-border pt-8"
+         className="container mx-auto px-6 relative z-10 flex flex-col md:flex-row justify-between items-center text-foreground/40 text-sm border-t border-border pt-8"
       >
         <p>© {new Date().getFullYear()} Marvin Software Solution. All rights reserved.</p>
         <div className="flex gap-6 mt-4 md:mt-0">
-          <Link href="/impressum" className="hover:text-foreground transition-colors">Impressum</Link>
-          <Link href="/datenschutz" className="hover:text-foreground transition-colors">Datenschutz</Link>
+          <Link href="/impressum" className="hover:text-foreground transition-colors">{legalLinks.imprint}</Link>
+          <Link href="/datenschutz" className="hover:text-foreground transition-colors">{legalLinks.privacy}</Link>
         </div>
       </motion.div>
     </footer>
