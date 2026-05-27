@@ -12,11 +12,14 @@ export function AboutSection() {
   const imgScale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
 
   return (
-    <section id="about" ref={containerRef} className="py-32 bg-surface transition-colors duration-500">
-      <div className="container mx-auto px-6">
+    <section id="about" ref={containerRef} className="py-32 bg-surface transition-colors duration-500 relative">
+      
+      <div className="absolute inset-0 bg-grid-pattern opacity-[0.25] select-none pointer-events-none mix-blend-multiply dark:mix-blend-overlay" />
+      <div className="absolute inset-0 bg-gradient-to-b from-surface via-transparent to-surface pointer-events-none" />
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-12 gap-16 md:gap-24 relative items-start">
           
-          {/* Image & Intro (Left Column) - Sticky */}
           <div className="md:col-span-5 relative md:sticky md:top-32 md:pb-12 h-fit">
             <motion.div 
                initial={{ opacity: 0, scale: 0.95 }}
@@ -34,7 +37,6 @@ export function AboutSection() {
                   />
                 </motion.div>
                 
-                {/* Floating Tag */}
                 <motion.div 
                    animate={{ y: [0, -10, 0] }}
                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -58,10 +60,8 @@ export function AboutSection() {
             </motion.div>
           </div>
 
-          {/* Details (Right Column) */}
           <div className="md:col-span-7 flex flex-col gap-32 pt-8 md:pt-16 pb-32 md:pb-0">
             
-            {/* Über mich */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -76,7 +76,6 @@ export function AboutSection() {
               </p>
             </motion.div>
 
-            {/* Philosophie / Haltung */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -90,7 +89,6 @@ export function AboutSection() {
                </p>
             </motion.div>
 
-            {/* Erfahrung */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -122,7 +120,6 @@ export function AboutSection() {
               </div>
             </motion.div>
 
-            {/* Arbeitsweise */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -132,7 +129,7 @@ export function AboutSection() {
                <h3 className="text-3xl font-semibold mb-10 flex items-center gap-4 tracking-tight">
                 <span className="w-8 h-px bg-foreground block" /> Arbeitsweise
               </h3>
-               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-3xl">
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 gap-y-16 max-w-3xl">
                  <div className="group">
                     <span className="text-accent font-mono text-sm tracking-widest block mb-4 group-hover:pl-2 transition-all duration-300">01 / KONZEPT</span>
                     <h4 className="text-xl mb-4 font-medium">Strategie & UX</h4>
@@ -143,10 +140,19 @@ export function AboutSection() {
                     <h4 className="text-xl mb-4 font-medium">Engineering</h4>
                     <p className="text-foreground/60 font-light leading-relaxed">Full-Stack Entwicklung mit modernen Technologien. Kompromissloser Fokus auf Performance, saubere Systemstrukturen und High-End UI-Animationen.</p>
                  </div>
+                 <div className="group">
+                    <span className="text-accent font-mono text-sm tracking-widest block mb-4 group-hover:pl-2 transition-all duration-300">03 / STAGING</span>
+                    <h4 className="text-xl mb-4 font-medium">Transparente Live-Previews</h4>
+                    <p className="text-foreground/60 font-light leading-relaxed">Keine Blackbox-Entwicklung. Sie erhalten bereits frühzeitig im Prozess einen passwortgeschützten Staging-Link. So können Sie den Fortschritt jederzeit live auf allen Geräten mittesten.</p>
+                 </div>
+                 <div className="group">
+                    <span className="text-accent font-mono text-sm tracking-widest block mb-4 group-hover:pl-2 transition-all duration-300">04 / QUALITÄT</span>
+                    <h4 className="text-xl mb-4 font-medium">Zero-Bug Garantie</h4>
+                    <p className="text-foreground/60 font-light leading-relaxed">Mein Stack ist auf Zuverlässigkeit ausgelegt. Sollten nach dem finalen Handover und Live-Gang dennoch technische Fehler in meinem Code auftreten, behebe ich diese anstandslos – völlig kostenlos.</p>
+                 </div>
                </div>
             </motion.div>
 
-            {/* Skills */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}

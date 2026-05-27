@@ -44,7 +44,6 @@ export function Header() {
           </a>
         </div>
 
-        {/* Mobile Toggle */}
         <div className="md:hidden flex items-center gap-4">
           <ThemeToggle />
           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -54,7 +53,6 @@ export function Header() {
 
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div 

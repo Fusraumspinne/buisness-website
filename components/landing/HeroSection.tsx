@@ -10,7 +10,6 @@ export function HeroSection() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   
-  // Parallax effects
   const yText = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
   const yImage = useTransform(scrollYProgress, [0, 1], ["0%", "80%"]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
@@ -18,7 +17,9 @@ export function HeroSection() {
   return (
     <section ref={ref} className="min-h-screen relative flex flex-col justify-center container mx-auto px-6 border-b border-border overflow-hidden bg-background">
       
-      {/* Background Animated Typography (Fills the empty space) */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-[0.15] select-none pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background pointer-events-none" />
+
       <motion.div 
         style={{ y: yImage }}
         className="absolute top-[40%] left-1/2 -translate-x-1/2 w-full text-center pointer-events-none -z-10 select-none overflow-hidden"
@@ -84,7 +85,6 @@ export function HeroSection() {
             transition={{ duration: 1.2, delay: 0.4, ease }}
             className="text-foreground/70 text-lg md:text-xl font-light leading-relaxed border-l border-border pl-6 relative"
           >
-            {/* Animated line drawing down */}
             <motion.div 
                initial={{ height: 0 }}
                animate={{ height: "100%" }}
@@ -114,25 +114,6 @@ export function HeroSection() {
 
       </motion.div>
 
-      {/* Viewport markers for subtle, continuous editorial animation without being superfluous */}
-      <motion.div 
-         animate={{ opacity: [0.1, 0.4, 0.1], y: [0, -5, 0] }}
-         transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
-         className="absolute top-[10%] right-[5%] flex items-center justify-center pointer-events-none select-none hidden md:flex"
-      >
-         <div className="w-px h-6 bg-foreground/30 absolute" />
-         <div className="h-px w-6 bg-foreground/30 absolute" />
-      </motion.div>
-      <motion.div 
-         animate={{ opacity: [0.1, 0.4, 0.1], y: [0, 5, 0] }}
-         transition={{ duration: 5, ease: "easeInOut", repeat: Infinity, delay: 2 }}
-         className="absolute bottom-[20%] left-[5%] flex items-center justify-center pointer-events-none select-none hidden md:flex"
-      >
-         <div className="w-px h-6 bg-foreground/30 absolute" />
-         <div className="h-px w-6 bg-foreground/30 absolute" />
-      </motion.div>
-
-      {/* Scroll Down Indicator */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -149,7 +130,6 @@ export function HeroSection() {
     </section>
   );
 }
-// Helper for tailwind clamp rendering in react
 function clamp(min: number, val: string, max: number) {
    return `clamp(${min}px, ${val}, ${max}px)` as any;
 }

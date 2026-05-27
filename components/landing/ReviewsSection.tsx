@@ -19,8 +19,6 @@ const ease = [0.16, 1, 0.3, 1] as const;
 export function ReviewsSection() {
   return (
     <section className="py-32 bg-surface overflow-hidden relative">
-
-      {/* Grid Pattern inside the surface section as well */}
       <div className="absolute inset-0 bg-grid-pattern opacity-10 select-none pointer-events-none mix-blend-multiply" />
       <div className="absolute inset-0 bg-gradient-to-b from-surface via-transparent to-surface pointer-events-none" />
 

@@ -19,7 +19,6 @@ const ServiceCard = ({
       whileHover={{ y: -8, scale: 1.01 }}
       className="p-8 md:p-12 relative bg-surface border border-border flex flex-col h-full group transition-all duration-700 hover:shadow-2xl hover:shadow-foreground/5 hover:border-foreground/20 overflow-hidden"
     >
-      {/* Subtle overlay on hover */}
       <div className="absolute inset-0 bg-background/0 group-hover:bg-background/40 transition-colors duration-700 pointer-events-none z-0" />
 
       <div className="relative z-10 flex justify-between items-start mb-12">
@@ -69,10 +68,8 @@ export function ServicesSection() {
   return (
     <section id="services" className="py-32 bg-background border-t border-border overflow-hidden relative">
       
-      {/* Background grid */}
       <div className="absolute inset-0 bg-grid-pattern opacity-30 select-none pointer-events-none" />
 
-      {/* Fade overlay so the grid isn't too blocky at the edges */}
       <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background pointer-events-none" />
 

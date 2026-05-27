@@ -46,7 +46,6 @@ function ProjectCard({ item, i }: { item: any; i: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-10%" }}
       transition={{ ease, duration: 1, delay: i * 0.15 }}
-      // Versetzen der mittleren Karte für einen modernen Masonry-Look
       className={`flex flex-col group cursor-pointer ${i === 1 ? 'md:mt-24' : ''}`}
     >
       <div className="w-full aspect-[4/5] relative overflow-hidden bg-surface mb-8 border border-border">
@@ -102,7 +101,6 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="py-32 bg-background border-t border-border relative overflow-hidden">
       
-      {/* Background grid */}
       <div className="absolute inset-0 bg-grid-pattern opacity-30 select-none pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background pointer-events-none" />
 
@@ -123,7 +121,6 @@ export function ProjectsSection() {
           </div>
         </motion.div>
 
-        {/* Kompaktes, modernes 3-Spalten-Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
           {projects.map((item, i) => (
             <ProjectCard key={item.id} item={item} i={i} />

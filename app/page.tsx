@@ -3,9 +3,11 @@
 import { motion } from "framer-motion";
 import { HeroSection } from "@/components/landing/HeroSection";
 import { AboutSection } from "@/components/landing/AboutSection";
-import { ProjectsSection } from "@/components/landing/ProjectsSection";
+import { BenefitsSection } from "@/components/landing/BenefitsSection";
 import { ServicesSection } from "@/components/landing/ServicesSection";
+import { ProjectsSection } from "@/components/landing/ProjectsSection";
 import { ReviewsSection } from "@/components/landing/ReviewsSection";
+import { FaqSection } from "@/components/landing/FaqSection";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -15,19 +17,18 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground selection:bg-accent selection:text-white transition-colors duration-500 overflow-clip">
       
-      {/* Background grain texture for premium feel */}
       <div className="fixed inset-0 pointer-events-none z-50 opacity-[0.03] mix-blend-difference" style={{ backgroundImage: 'url("/Platzhalter.png")' }}></div>
 
       <HeroSection />
       <AboutSection />
+      <BenefitsSection />
       <ServicesSection />
       <ProjectsSection />
       <ReviewsSection />
+      <FaqSection />
 
-      {/* Modern, animated Contact CTA replacing the old ContactSection */}
       <section id="contact" className="py-40 bg-background relative border-t border-border overflow-hidden">
         
-        {/* Subtle continuous vertical layout line */}
         <motion.div 
            animate={{ opacity: [0.1, 0.3, 0.1] }}
            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
