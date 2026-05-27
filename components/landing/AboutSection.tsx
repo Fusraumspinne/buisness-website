@@ -51,7 +51,7 @@ export function AboutSection() {
                   transition={{ duration: 0.8, delay: 0.2, ease }}
                   className="uppercase tracking-widest text-sm font-semibold text-accent"
                 >
-                  Founder & Lead Engineer
+                  Full-Stack Web Developer
                 </motion.p>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold tracking-tighter">Marvin Jäger</h2>
@@ -72,9 +72,7 @@ export function AboutSection() {
                 <span className="w-8 h-px bg-foreground block" /> Über Mich
               </h3>
               <p className="text-foreground/80 text-2xl font-light leading-relaxed text-balance">
-                Ich schreibe Code, der robust ist, und entwerfe Interfaces, die begeistern. 
-                Marvin Software Solution ist aus der Überzeugung heraus entstanden, dass herausragende Software den perfekten 
-                Schnittpunkt zwischen tiefgründiger Technik und makellosem Design treffen muss. Keine Kompromisse. Kein standardisiertes Agentur-Einerlei.
+                Hi! Ich bin Full-Stack Webentwickler aus Deutschland mit über 5 Jahren Erfahrung. Ich spezialisiere mich auf moderne, rasend schnelle und skalierbare Web-Applikationen mit Technologien wie Next.js, PostgreSQL, Supabase und Docker. 
               </p>
             </motion.div>
 
@@ -86,9 +84,9 @@ export function AboutSection() {
               transition={{ duration: 0.8, ease }}
               className="border-l-2 border-accent pl-8 ml-2 py-2"
             >
-               <h3 className="text-2xl font-serif italic mb-6 text-foreground/90">Weniger, aber besser.</h3>
+               <h3 className="text-2xl font-serif italic mb-6 text-foreground/90">Maßgeschneidert & Skalierbar.</h3>
                <p className="text-foreground/60 text-lg font-light leading-relaxed text-balance max-w-2xl">
-                 Ein gutes digitales Produkt braucht nicht tausende Features. Es braucht eine Handvoll perfekt ausgeführter Kernfunktionen, eingebettet in eine kompromisslose User Experience. Ich streiche alles Unnötige weg, bis nur noch das Essenzielle – und Fehlerfreie – übrig bleibt.
+                 Ob responsive Portfolios, Custom Web-Apps, komplexe Dashboards oder Backend-Systeme – ich baue Lösungen, die exakt auf den Use Case zugeschnitten sind. Kein Baukasten, sondern echte digitale Produkte von der Code-Architektur bis hin zum Deployment Setup.
                </p>
             </motion.div>
 
@@ -103,14 +101,13 @@ export function AboutSection() {
                 <span className="w-8 h-px bg-foreground block" /> Erfahrung
               </h3>
               <p className="text-foreground/70 text-lg font-light leading-relaxed mb-10 max-w-2xl">
-                Über die Jahre habe ich Dutzende von digitalen Produkten live gebracht – von flüssigen, Conversion-optimierten Corporate 
-                Websites über komplexe APIs bis hin zu hoch skalierbaren B2B Dashboards.
+                Durch intensive Projektarbeit und Praktika in Softwareunternehmen habe ich tiefe Einblicke in professionelle Entwickler-Workflows gewonnen – Frontend, Backend sowie System Integration.
               </p>
               <div className="space-y-6 max-w-2xl">
                 {[
-                  { label: "Software Engineering", time: "5+ Jahre" },
-                  { label: "UI/UX & Digital Design", time: "4+ Jahre" },
-                  { label: "System Architektur", time: "3+ Jahre" }
+                  { label: "Web Development", time: "5+ Jahre" },
+                  { label: "Frontend (React, Next.js)", time: "Pro Level" },
+                  { label: "Backend (Node, Postgres)", time: "Intermediate" }
                 ].map((item, i) => (
                   <motion.div 
                     key={i}

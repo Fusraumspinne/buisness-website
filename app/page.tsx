@@ -16,7 +16,7 @@ export default function Home() {
     <main className="min-h-screen bg-background text-foreground selection:bg-accent selection:text-white transition-colors duration-500 overflow-clip">
       
       {/* Background grain texture for premium feel */}
-      <div className="fixed inset-0 pointer-events-none z-50 opacity-[0.03] mix-blend-difference" style={{ backgroundImage: 'url("/noise.png")' }}></div>
+      <div className="fixed inset-0 pointer-events-none z-50 opacity-[0.03] mix-blend-difference" style={{ backgroundImage: 'url("/Platzhalter.png")' }}></div>
 
       <HeroSection />
       <AboutSection />

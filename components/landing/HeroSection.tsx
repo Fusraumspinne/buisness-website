@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ArrowDown, Asterisk } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -11,7 +11,8 @@ export function HeroSection() {
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   
   // Parallax effects
-  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
+  const yImage = useTransform(scrollYProgress, [0, 1], ["0%", "80%"]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
@@ -19,16 +20,21 @@ export function HeroSection() {
       
       {/* Background Animated Typography (Fills the empty space) */}
       <motion.div 
-        style={{ y: useTransform(scrollYProgress, [0, 1], ["0%", "100%"]) }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none -z-10 select-none"
+        style={{ y: yImage }}
+        className="absolute top-[40%] left-1/2 -translate-x-1/2 w-full text-center pointer-events-none -z-10 select-none overflow-hidden"
       >
-        <h1 className="text-[20vw] font-black text-foreground/[0.02] leading-none whitespace-nowrap">
+        <motion.h1 
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 2, ease: "easeOut" }}
+          className="text-[clamp(6rem,18vw,20rem)] font-black text-foreground/[0.015] leading-none whitespace-nowrap"
+        >
           SOFTWARE
-        </h1>
+        </motion.h1>
       </motion.div>
 
-      <motion.div style={{ y: yText, opacity }} className="relative z-10 grid md:grid-cols-12 gap-8 items-center mt-20">
-        <div className="md:col-span-8">
+      <motion.div style={{ y: yText, opacity }} className="relative z-10 grid md:grid-cols-12 gap-8 md:gap-12 items-center mt-20">
+        <div className="md:col-span-8 z-20">
           <div className="overflow-hidden mb-8">
             <motion.div 
               initial={{ y: "100%", opacity: 0 }}
@@ -46,8 +52,8 @@ export function HeroSection() {
             </motion.div>
           </div>
           
-          <h1 className="text-[clamp(4.5rem,10vw,11rem)] font-bold leading-[0.85] tracking-tighter">
-            <div className="overflow-hidden">
+          <h1 className="text-[clamp(3.5rem,7vw,9.5rem)] font-bold leading-[0.9] tracking-tighter" style={{ wordBreak: 'break-word', hyphens: 'auto' }}>
+            <div className="overflow-hidden pb-4">
               <motion.span 
                  initial={{ y: "120%", rotate: 2 }} 
                  animate={{ y: 0, rotate: 0 }} 
@@ -57,32 +63,25 @@ export function HeroSection() {
                 We build
               </motion.span>
             </div>
-            <div className="overflow-hidden">
+            <div className="overflow-hidden pb-4">
               <motion.span 
                  initial={{ y: "120%", rotate: 2 }} 
                  animate={{ y: 0, rotate: 0 }} 
                  transition={{ duration: 1.2, delay: 0.25, ease }}
-                 className="block origin-bottom-left flex items-center gap-4"
+                 className="block origin-bottom-left flex flex-wrap items-center gap-x-4 gap-y-2 md:whitespace-nowrap"
               >
                 <span className="text-accent italic font-serif tracking-normal">sharp</span> 
-                software.
-                <motion.span
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="hidden md:block text-foreground/20 ml-4"
-                >
-                  <Asterisk size={clamp(40, "6vw", 80)} strokeWidth={1} />
-                </motion.span>
+                <span>software.</span>
               </motion.span>
             </div>
           </h1>
         </div>
 
-        <div className="md:col-span-4 mt-8 md:mt-0">
+        <div className="md:col-span-4 mt-8 md:mt-0 z-10">
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.5, ease }}
+            transition={{ duration: 1.2, delay: 0.4, ease }}
             className="text-foreground/70 text-lg md:text-xl font-light leading-relaxed border-l border-border pl-6 relative"
           >
             {/* Animated line drawing down */}
@@ -117,7 +116,7 @@ export function HeroSection() {
 
       {/* Viewport markers for subtle, continuous editorial animation without being superfluous */}
       <motion.div 
-         animate={{ opacity: [0.1, 0.4, 0.1] }}
+         animate={{ opacity: [0.1, 0.4, 0.1], y: [0, -5, 0] }}
          transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
          className="absolute top-[10%] right-[5%] flex items-center justify-center pointer-events-none select-none hidden md:flex"
       >
@@ -125,7 +124,7 @@ export function HeroSection() {
          <div className="h-px w-6 bg-foreground/30 absolute" />
       </motion.div>
       <motion.div 
-         animate={{ opacity: [0.1, 0.4, 0.1] }}
+         animate={{ opacity: [0.1, 0.4, 0.1], y: [0, 5, 0] }}
          transition={{ duration: 5, ease: "easeInOut", repeat: Infinity, delay: 2 }}
          className="absolute bottom-[20%] left-[5%] flex items-center justify-center pointer-events-none select-none hidden md:flex"
       >
