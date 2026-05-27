@@ -31,7 +31,7 @@ export function ProjectsSection() {
                src={item.image} 
                alt={item.title} 
                fill 
-               className="object-cover transition-all duration-700 grayscale group-hover:grayscale-0 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+               className="object-cover transition-all duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
              />
            </motion.div>
            

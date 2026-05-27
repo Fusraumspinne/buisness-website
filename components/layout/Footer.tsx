@@ -29,13 +29,6 @@ export function Footer() {
           className="md:col-span-2"
         >
           <Link href="/" className="font-bold tracking-tighter text-3xl flex items-center gap-3 mb-6 overflow-hidden group">
-            <motion.span 
-               initial={{ scale: 0 }}
-               whileInView={{ scale: 1 }}
-               viewport={{ once: true }}
-               transition={{ duration: 0.8, delay: 0.2, ease }}
-               className="w-5 h-5 bg-foreground block rounded-sm group-hover:rotate-180 transition-transform duration-700" 
-            />
             Marvin
           </Link>
           <p className="text-foreground/60 max-w-sm font-light leading-relaxed">

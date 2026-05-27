@@ -30,12 +30,6 @@ export function Navbar() {
         <div className="container mx-auto">
            <div className="bg-background/60 backdrop-blur-md border border-border/50 shadow-sm rounded-full h-16 pointer-events-auto px-6 flex items-center justify-between uppercase text-xs md:text-sm tracking-widest font-medium">
              <Link href="/" className="font-bold tracking-tighter normal-case text-lg flex items-center gap-3 overflow-hidden group">
-               <motion.span 
-                 initial={{ scale: 0, rotate: -45 }} 
-                 animate={{ scale: 1, rotate: 0 }} 
-                 transition={{ duration: 0.8, delay: 0.5, ease }} 
-                 className="w-3 h-3 bg-foreground block rounded-[2px] group-hover:rotate-45 transition-transform duration-500"
-               />
                <motion.span
                  initial={{ opacity: 0, x: -20 }}
                  animate={{ opacity: 1, x: 0 }}

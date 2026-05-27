@@ -22,7 +22,7 @@ export const translations = {
       tag: "Available for Projects",
       role: "Full-Stack Web Developer",
       section1Title: "Über Mich",
-      section1Desc: "Hi! Ich bin Full-Stack Webentwickler aus Deutschland mit über 5 Jahren Erfahrung. Ich spezialisiere mich auf moderne, rasend schnelle und skalierbare Web-Applikationen mit Technologien wie Next.js, PostgreSQL, Supabase und Docker.",
+      section1Desc: "Hi! Ich bin Marvin, ein Full-Stack Webentwickler aus Deutschland mit über 5 Jahren Erfahrung. Ich spezialisiere mich auf moderne, rasend schnelle und skalierbare Web-Applikationen mit Technologien wie Next.js, PostgreSQL, Supabase und Docker.",
       quoteTitle: "Maßgeschneidert & Skalierbar.",
       quoteDesc: "Ob responsive Portfolios, Custom Web-Apps, komplexe Dashboards oder Backend-Systeme – ich baue Lösungen, die exakt auf den Use Case zugeschnitten sind. Kein Baukasten, sondern echte digitale Produkte von der Code-Architektur bis hin zum Deployment Setup.",
       expTitle: "Erfahrung",
@@ -37,7 +37,7 @@ export const translations = {
         { num: "01 / KONZEPT", title: "Strategie & UX", desc: "Wir analysieren das Problem bis auf den Grund. Keine Zeile Code wird geschrieben, bevor Architektur und User Journey absolut präzise definiert sind." },
         { num: "02 / UMSETZUNG", title: "Engineering", desc: "Full-Stack Entwicklung mit modernen Technologien. Kompromissloser Fokus auf Performance, saubere Systemstrukturen und High-End UI-Animationen." },
         { num: "03 / STAGING", title: "Transparente Live-Previews", desc: "Keine Blackbox-Entwicklung. Sie erhalten bereits frühzeitig im Prozess einen passwortgeschützten Staging-Link. So können Sie den Fortschritt jederzeit live auf allen Geräten mittesten." },
-        { num: "04 / QUALITÄT", title: "Zero-Bug Garantie", desc: "Mein Stack ist auf Zuverlässigkeit ausgelegt. Sollten nach dem finalen Handover und Live-Gang dennoch technische Fehler in meinem Code auftreten, behebe ich diese anstandslos – völlig kostenlos." }
+        { num: "04 / QUALITÄT", title: "Zero-Bug Garantie", desc: "Mein Stack ist auf Zuverlässigkeit ausgelegt. Sollten nach dem finalen Handover und Live-Gang dennoch technische Fehler in meinem Code auftreten innnerhalb von einem Monat, behebe ich diese anstandslos – völlig kostenlos." }
       ],
       skillsTitle: "Skills & Tech Stack",
       skillsDesc: "Mein Stack ist konsequent auf Performance und Entwickler-Experience ausgerichtet. Fully typed, Edge-ready und absolut verlässlich im Production-Einsatz.",
@@ -81,9 +81,9 @@ export const translations = {
       count: "03 Projects",
       value: "Project Value",
       items: [
-        { id: 1, title: "CRM System", category: "Custom Web App", price: "~ 1000 €", desc: "Ein komplexes, maßgeschneidetes CRM-System mit umfangreichen Funktionen und diversen Integrationen von Technologien und Funktionen, um die Verwaltung von Akten und Kunden zu optimieren.", image: "/Platzhalter.png" },
-        { id: 2, title: "Burger Shop", category: "Landing Page", price: "~ 150 €", desc: "Eine visuell auffällige Landing Page mit starker Markenidentität, Custom Animations und Neon-Akzenten für ein einzigartiges Erlebnis, das die Aufmerksamkeit der Kunden auf sich zieht.", image: "/Platzhalter.png" },
-        { id: 3, title: "Lead Managing Tool", category: "Custom Web App", price: "~ 750 €", desc: "Ein Tool zur Lead-Einreichung und Verwaltung mit täglichen Reports und verschiedenen Nutzerrollen, um Effizienz und Übersicht zu steigern.", image: "/Platzhalter.png" }
+        { id: 1, title: "CRM System", category: "Custom Web App", price: "~ 1000 €", desc: "Ein komplexes, maßgeschneidetes CRM-System mit umfangreichen Funktionen und diversen Integrationen von Technologien und Funktionen, um die Verwaltung von Akten und Kunden zu optimieren.", image: "/CRMSystem.png" },
+        { id: 2, title: "Burger Shop", category: "Landing Page", price: "~ 150 €", desc: "Eine visuell auffällige Landing Page mit starker Markenidentität, Custom Animations und Neon-Akzenten für ein einzigartiges Erlebnis, das die Aufmerksamkeit der Kunden auf sich zieht.", image: "/BurgerShop.png" },
+        { id: 3, title: "Lead Managing Tool", category: "Custom Web App", price: "~ 750 €", desc: "Ein Tool zur Lead-Einreichung und Verwaltung mit täglichen Reports und verschiedenen Nutzerrollen, um Effizienz und Übersicht zu steigern.", image: "/LeadTool.png" }
       ]
     },
     reviews: {
@@ -134,7 +134,7 @@ export const translations = {
       tag: "Available for Projects",
       role: "Full-Stack Web Developer",
       section1Title: "About Me",
-      section1Desc: "Hi! I am a full-stack web developer from Germany with over 5 years of experience. I specialize in modern, blazing fast, and scalable web applications using technologies like Next.js, PostgreSQL, Supabase, and Docker.",
+      section1Desc: "Hi! I am Marvin a full-stack web developer from Germany with over 5 years of experience. I specialize in modern, blazing fast, and scalable web applications using technologies like Next.js, PostgreSQL, Supabase, and Docker.",
       quoteTitle: "Tailored & Scalable.",
       quoteDesc: "Whether responsive portfolios, custom web apps, complex dashboards, or backend systems – I build solutions tailored exactly to your use case. No site builders, just real digital products from code architecture to deployment setup.",
       expTitle: "Experience",
@@ -149,7 +149,7 @@ export const translations = {
         { num: "01 / CONCEPT", title: "Strategy & UX", desc: "We analyze the problem down to the core. No line of code is written before architecture and user journey are precisely defined." },
         { num: "02 / EXECUTION", title: "Engineering", desc: "Full-stack development with modern technologies. Uncompromising focus on performance, clean system structures, and high-end UI animations." },
         { num: "03 / STAGING", title: "Transparent Live-Previews", desc: "No black box development. You will receive a password-protected staging link early directly during the process. This way you can track the progress live on all devices." },
-        { num: "04 / QUALITY", title: "Zero-Bug Guarantee", desc: "My stack is built for reliability. Should any technical errors occur in my code after final handover and deployment, I will fix them without hesitation – completely free of charge." }
+        { num: "04 / QUALITY", title: "Zero-Bug Guarantee", desc: "My stack is built for reliability. Should any technical errors occur in my code after final handover and deployment within one month, I will fix them without hesitation – completely free of charge." }
       ],
       skillsTitle: "Skills & Tech Stack",
       skillsDesc: "My stack is strictly aimed at performance and developer experience. Fully typed, edge-ready, and absolutely reliable in production.",

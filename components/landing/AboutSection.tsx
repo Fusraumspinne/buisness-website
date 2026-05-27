@@ -31,10 +31,10 @@ export function AboutSection() {
               <div className="aspect-[4/5] relative overflow-hidden mb-6 md:mb-8 border border-border">
                 <motion.div style={{ scale: imgScale }} className="w-full h-full relative">
                   <Image 
-                    src="/Platzhalter.png"
+                    src="/Me.png"
                     alt="Marvin Jäger"
                     fill
-                    className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                    className="object-cover transition-all duration-1000"
                   />
                 </motion.div>
                 
